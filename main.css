@@ -36,6 +36,7 @@ hr.toumei { margin: 0px; height: 4px; border-color : transparent; }
 }
 .row_membername{
   height: 30px;
+  line-height: 12px;
 }
 
 
