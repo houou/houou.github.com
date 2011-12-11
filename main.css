@@ -11,3 +11,11 @@
 body { width: 320px; }
 div#tosaka div { height: 100%; }
 hr.toumei { margin: 0px; height: 4px; border-color : transparent; }
+.rad4{
+  -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px;
+}
+
+.rad6{
+  -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px;
+}
+
