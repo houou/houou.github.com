@@ -51,6 +51,7 @@ hr.white2 { margin: 0px; height: 2px; border-bottom: 0px;background: #ffffff; op
 .timeline *{
   text-align: left;
 }
-.comment {
+.comment *{
   background: #ddd;
+  text-align: left;
 }
