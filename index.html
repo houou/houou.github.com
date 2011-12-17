@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="bootstrap.css" media="all" />
 <link rel="stylesheet" href="main.css" media="all" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/bootstrap-twipsy.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-alerts.js"></script>
 <script src="js/bootstrap-modal.js"></script>
 </head>
 <body>
@@ -30,7 +33,7 @@
   <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
   <div class="span8">
     <hr class="toumei">
-    <div class="row"><span class="face-name">西之園　萌絵</span></div>
+    <div class="row"><span class="face-name">野田 江川富士一二三四</span></div>
     <hr class="toumei">
     <div class="row"><a href="#">@MoeNishinosono</a></div>
   </div>
@@ -47,30 +50,27 @@
   </div>
   <div class="span2 center"> <img src="./COMMUNITY.png" height="48"> </div>
 </div>
-<div class="gadget span12">
-  <div class="gadget_header">Modal Test </div>
-</div>
-<h3>Demo</h3>
-<!-- sample modal content --> 
-<!--
-  <div id="modal-from-dom" class="modal hide fade" style="width: 320px;">
--->
-<div id="modal-from-dom" class="modal hide fade" style="width: 320px;">
-  <div class="modal-header"> <a href="#" class="close">&times;</a>
-    <h3>Modal Heading</h3>
+
+<hr class="toumei">
+<div id="face" class="row">
+  <div class="span2"><img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+  <div class="span3">
+    <img src="./post_icon.png" alt="" />
   </div>
-  <div class="modal-body">
-    <p>One fine <br>
-      <br>
-      <br>
-      body</p>
+  <div class="span5">
+    <div class="row"><span class="face-name">フットサル</span></div>
+    <hr class="toumei">
+    <div class="row"><a href="#">@TeamSagantosu</a></div>
   </div>
-  <div class="modal-footer"> <a href="#" class="btn primary">Primary</a> <a href="#" class="btn secondary">Secondary</a> </div>
+  <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
 </div>
-<a class="btn" data-controls-modal="modal-from-dom" data-backdrop="static" >Launch Modal</a>
+<hr class="toumei">
+
+
 <div class="row">
   <div class="gadget_header span12"> M e m b e r I m a g e </div>
 </div>
+
 <div class="row">
   <div class="span12">
     <hr class="toumei">
@@ -85,7 +85,7 @@
 <div class="timeline font10 row">
   <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad6" width="46" height="46"> </div>
   <div class="span10">
-    まるまるもりもりまるまるもりもりまるまるもりもりまるまるもりもり>まるまるもりもりまるまるもりもりまるまるもりも
+    <a href="#" class="screenmae">@MamoruTejima</a>まるまるもりもりまるまるもりもりまるまるもりもりまるまるもりもり>まるまるもりもりまるまるもりもりまるまるもりも
     <br>12分前 From Twitter
   </div>
 </div>
@@ -198,5 +198,84 @@
     <div class="row_membername font10 row">手嶋　守</div>
   </div>
 </div>
+
+
+
+<div class="row">
+  <div class="gadget_header span12">JavaScript Test </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $(".b").click(function(){
+      alert();
+      $("#cqcall").alert("close");
+    });
+});
+</script>
+
+<button class="b">button</button>
+<div class="alert-message success fade in" data-alert="alert">
+  <a class="close" href="#">&times;</a>
+  <p> You successfully <a href="#">read this</a> alert message.</p>
+</div>
+<div class="alert-message error fade in" data-alert="alert">
+  <a class="close" href="#">&times;</a>
+  <p> You successfully <a href="#">read this</a> alert message.</p>
+</div>
+
+<div id="cqcall" class="alert-message warning fade in" data-alert="alert" >
+  <a class="close" href="#">&times;</a>
+  <p>You’re not looking too good.</p>
+</div>
+<div class="alert-message block-message error fade in" data-alert="alert" >
+  <a class="close" href="#">&times;</a>
+  <p><strong>Oh snap! You got an error!</strong> Chant amet fermentum.</p>
+  <div class="alert-actions">
+    <a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+  </div>
+</div>
+
+<div id="modal-from-dom" class="modal hide fade" style="width: 320px;">
+  <div class="modal-header"> <a href="#" class="close">&times;</a>
+    <h3>Modal Heading</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine <br>
+      <br>
+      <br>
+      body</p>
+  </div>
+  <div class="modal-footer"> <a href="#" class="btn primary">Primary</a> <a href="#" class="btn secondary">Secondary</a> </div>
+</div>
+<a class="btn" data-controls-modal="modal-from-dom" data-backdrop="static" >Launch Modal</a>
+
+<hr class="toumei">
+
+
+
+
+
+<div class="row">
+  <div class="gadget_header span12">SPEED MEMBER INFO</div>
+</div>
+
+<div id="face" class="row">
+  <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+  <div class="span8">
+    <hr class="toumei">
+    <div class="row"><span class="face-name">手嶋　守</span></div>
+    <hr class="toumei">
+    <div class="row"><a href="#">@MamoruTejima</a></div>
+  </div>
+  <div class="span2 center">&times; </div>
+</div>
+<div class="row">
+  <div class="span2">HOME</div>
+  <div class="span2">PM</div>
+  <div class="span2">@@@</div>
+  <div class="span2">LINK</div>
+</div>
+
 </body>
 </html>
