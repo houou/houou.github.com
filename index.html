@@ -14,9 +14,13 @@
 </head>
 <body style="margin: 0 auto;" >
 
-
 <script>
 $(document).ready(function(){
+  $(".commentbutton").click(function(){
+    alert("test")
+    $(".commentform").toggle();
+    $(".commentbutton").toggle();
+  });
   $(".postbutton").click(function(){
     $(".postform").toggle();
   });
@@ -30,7 +34,6 @@ $(document).ready(function(){
   <div class="span4 center"> <img src="./NOTIFY_CENTER.png" alt="" /> </div>
   <div class="span3 offset1 center"> <img class="postbutton" src="./POST.png" alt="" /> </div>
 </div>
-
 
 <div class="postform hide">
   <div class="post_margin row" style="height: 12px;">
@@ -57,56 +60,11 @@ $(document).ready(function(){
   <div class="row">
     <button class="span12 btn small primary" >POST</button>
   </div>
-
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-<hr class="toumei">
-
+<hr class="toumei100">
+<hr class="toumei100">
+<hr class="toumei100">
+<hr class="toumei100">
 </div>
-
 
 <div id="face" class="row">
   <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
@@ -185,10 +143,20 @@ $(document).ready(function(){
       <hr class="toumei2">
       <div class="span1"><img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad6" width="23" height="23"> </div>
       <div class="span9"> まるまるもりもりまるまるもりもりまるまるもりもりまるまるもり>もりまるまるもりもり<br>
-        10分前 From Twitter </div>
+        10分前 From Twitter
+      </div>
     </div>
   </div>
 </div>
+
+<div class="commentform row hide">
+  <textarea class="commentarea span10 offset2" rows="3"></textarea>
+  <button class="commentsubmit btn span10 offset2 small" style="height: 20px; padding: 2px;">投稿</button>
+</div>
+<div class="row">
+  <button class="commentbutton btn span10 offset2 small" style="height: 20px; padding: 2px;">コメントする</button>
+</div>
+
 
 <div class="row">
   <div class="gadget_header span12"> P r o f i l e </div>
