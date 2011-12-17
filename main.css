@@ -1,6 +1,7 @@
 #face .row { padding: 0px 0px 0px 4px; }
 #face a { font-size: 14px; }
 #face { height: 52px; background: #eeeeee; padding: 4px 0px 0px 0px; }
+.post_margin { background: #555; }
 #tosaka { height: 34px; background: #555; }
 .center { margin-left:auto; margin-right:auto; text-align:center; }
 .debug { background: #aaaaaa; text-align: center; height: 32px; }
