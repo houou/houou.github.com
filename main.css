@@ -37,7 +37,7 @@ hr.white2 { margin: 0px; height: 2px; border-bottom: 0px;background: #ffffff; op
 
 .menu-middle .btn{
   margin-right: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .menu-bottom{
   background: #555;
@@ -69,6 +69,10 @@ hr.white2 { margin: 0px; height: 2px; border-bottom: 0px;background: #ffffff; op
 .font14{
   font-size: 14px;
   line-height: 16px;
+}
+.font20{
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .row_memberimg{
