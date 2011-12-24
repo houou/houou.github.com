@@ -15,44 +15,163 @@
 <body style="margin: 0 auto;" >
 
 <script>
+function hideall(){
+  $(".tosaka_margin").hide();
+  $(".right_margin").hide();
+  $(".left_margin").hide();
+  $(".center_margin").hide();
+
+  $(".ncform").hide();
+  $(".nc_body").hide();
+  $(".postform").hide();
+  $(".menuform").hide();
+
+  $("#slot_face > .row").show();
+  $("#slot_body > * ").hide();
+}
 $(document).ready(function(){
-  $(".commentbutton").click(function(){
-    alert("test")
-    $(".commentform").toggle();
-    $(".commentbutton").toggle();
-  });
   $(".postbutton").click(function(){
-    $(".postform").toggle();
+    hideall();
+
+    $(".right_margin").show();
+
+    $("#slot_face > .row").hide();//hide default face
+
+    $(".postface.template").removeClass("template").appendTo("#slot_body");
+    $(".postface").show();
+
+    $(".postform.template").removeClass("template").appendTo("#slot_body");
+    $(".postform").show();
+
+  });
+
+  $(".topbutton").click(function(){
+    hideall();
+    $(".left_margin").show();
+  });
+
+  $(".menubutton").click(function(){
+    hideall();
+    $(".tosaka_margin").show();
+
+    $(".menuform.template").removeClass("template").appendTo("#slot_body");
+    $(".menuform").show();
+  });
+
+  $(".ncbutton").click(function(){
+    hideall();
+    $(".center_margin").show();
+
+    $(".nc_body.template").removeClass("template").appendTo("#slot_body");
+    $(".nc_body").show();
   });
 
 });
 
 </script>
-
-<div id="tosaka" class="row">
-  <div class="span4"> <img src="./LOGO.png" alt="" /> </div>
-  <div class="span4 center"> <img src="./NOTIFY_CENTER.png" alt="" /> </div>
-  <div class="span3 offset1 center"> <img class="postbutton" src="./POST.png" alt="" /> </div>
+<div id="slot_tosaka">
+  <div class="row">
+    <div class="span4"> <img class="topbutton" src="./LOGO.png" alt="" /> </div>
+    <div class="span4 ncbutton center"> <img src="./NOTIFY_CENTER.png" alt="" /> </div>
+    <div class="span3 offset1 center"> <img class="postbutton" src="./POST.png" alt="" /> </div>
+  </div>
+</div>
+<div class="tosaka_margin row" style="height: 12px;">
+</div>
+<div class="left_margin row hide" style="height: 12px;">
+  <img src="./LEFT_MARGIN.png" width="324" alt="" />
+</div>
+<div class="center_margin row hide" style="height: 12px;">
+  <img src="./CENTER_MARGIN.png" width="324" alt="" />
+</div>
+<div class="right_margin row hide" style="height: 12px;">
+  <img src="./RIGHT_MARGIN.png" width="324" alt="" />
 </div>
 
-<div class="postform hide">
-  <div class="post_margin row" style="height: 12px;">
-    <div class="span12">
-      <img src="./POST_MARGIN.png" width="320" alt="" />
-    </div>
-  </div>
-  <div id="face" class="row">
-    <div class="span2"><img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
-    <div class="span3">
-      <img src="./post_icon.png" alt="" />
-    </div>
-    <div class="span5">
-      <div class="row"><span class="face-name">フットサル</span></div>
-      <hr class="toumei">
-      <div class="row"><a href="#">@TeamSagantosu</a></div>
-    </div>
+<div id="slot_face">
+  <div class="row">
     <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+    <div class="span8">
+      <hr class="toumei">
+      <div class="row"><span class="face-name">手嶋　守</span></div>
+      <hr class="toumei">
+      <div class="row"><a href="#">@MamoruTejima</a></div>
+    </div>
+    <div class="span2 center"> <img class="menubutton" src="./HomeIcon.png" height="48"> </div>
   </div>
+</div>
+
+
+<div id="slot_body"></div>
+
+<hr class="toumei">
+<div class="menuform hide template">
+  
+  <div class="menu-margin row">
+    <img src="./MENU_MARGIN.png" width="324" height="12" >　
+  </div>
+  <div class="menu-top row">
+    　
+  </div>
+  <div class="menu-middle row">
+    <div class="span4 offset1" style="text-align: left;">
+     Home Menu
+    </div>
+  </div>
+  <div class="menu-middle row">
+    <div class="span11 offset1">
+      <a class="btn">Home</a>
+      <a class="btn">Diary</a>
+      <a class="btn">Community</a>
+      <a class="btn">Community</a>
+      <a class="btn">Logout</a>
+      <a class="btn">Home</a>
+      <a class="btn">Diary</a>
+      <a class="btn">Logout</a>
+      <a class="btn">Home</a>
+      <a class="btn">Diary</a>
+      <a class="btn">Community</a>
+      <a class="btn">Logout</a>
+    </div>
+  </div>
+  <div class="menu-middle row">
+    <div class="span4 offset1" style="text-align: left;">
+     Global Menu
+    </div>
+  </div>
+  <div class="menu-middle row">
+  <div class="span11 offset1">
+    <a class="btn">Home</a>
+    <a class="btn">Diary</a>
+    <a class="btn">Community</a>
+    <a class="btn">Logout</a>
+  </div>
+</div>
+
+<div class="menu-bottom row">
+ <div class="span12">　</div>
+</div>
+</div>
+
+
+
+<div class="nc_body row hide template">
+Notification Center
+</div>
+
+<div class="postface row hide template">
+  <div class="span2"><img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+  <div class="span3">
+    <img src="./post_icon.png" alt="" />
+  </div>
+  <div class="span5">
+    <div class="row"><span class="face-name">フットサル</span></div>
+    <hr class="toumei">
+    <div class="row"><a href="#">@TeamSagantosu</a></div>
+  </div>
+  <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+</div>
+<div class="postform hide template">
   <hr class="toumei">
   <div class="row">
     <textarea class="span12" rows="3" >?</textarea>
@@ -65,64 +184,6 @@ $(document).ready(function(){
 <hr class="toumei100">
 <hr class="toumei100">
 </div>
-
-<div id="face" class="row">
-  <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
-  <div class="span8">
-    <hr class="toumei">
-    <div class="row"><span class="face-name">手嶋　守</span></div>
-    <hr class="toumei">
-    <div class="row"><a href="#">@MamoruTejima</a></div>
-  </div>
-  <div class="span2 center"> <img src="./HomeIcon.png" height="48"> </div>
-</div>
-
-
-<hr class="toumei">
-
-<div class="menu-top row">
-　
-</div>
-<div class="menu-middle row">
-<div class="span4 offset1" style="text-align: left;">
- Home Menu
-</div>
-</div>
-<div class="menu-middle row">
-<div class="span11 offset1">
-  <a class="btn">Home</a>
-  <a class="btn">Diary</a>
-  <a class="btn">Community</a>
-  <a class="btn">Community</a>
-  <a class="btn">Logout</a>
-  <a class="btn">Home</a>
-  <a class="btn">Diary</a>
-  <a class="btn">Logout</a>
-  <a class="btn">Home</a>
-  <a class="btn">Diary</a>
-  <a class="btn">Community</a>
-  <a class="btn">Logout</a>
-</div>
-</div>
-<div class="menu-middle row">
-<div class="span4 offset1" style="text-align: left;">
- Global Menu
-</div>
-</div>
-<div class="menu-middle row">
-<div class="span11 offset1">
-  <a class="btn">Home</a>
-  <a class="btn">Diary</a>
-  <a class="btn">Community</a>
-  <a class="btn">Logout</a>
-</div>
-</div>
-</div>
-
-<div class="menu-bottom row">
- <div class="span12">　</div>
-</div>
-
 
 </body>
 </html>
