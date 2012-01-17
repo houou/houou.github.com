@@ -9,6 +9,28 @@
   color:#ffffff;
 }
 
+#notification_center{
+  position: relative;
+
+}
+.nc_icon1 {
+  position:absolute;
+  top: 18px;
+  left: 24px;
+  line-height: 10px;
+}
+.nc_icon2 {
+  position:absolute;
+  top: 18px;
+  left: 58px;
+  line-height: 10px;
+}
+.nc_icon3 {
+  position:absolute;
+  top: 18px;
+  left: 90px;
+  line-height: 10px;
+}
 
 .postface { height: 52px; background: #eeeeee; padding: 4px 0px 0px 0px; }
 .tosaka_margin, .right_margin, .left_margin, .center_margin { background: #555; }
