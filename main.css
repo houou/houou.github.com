@@ -1,10 +1,22 @@
 #slot_face .row { padding: 0px 0px 0px 4px; }
 #slot_face a { font-size: 14px; }
 #slot_face > .row { height: 52px; background: #eeeeee; padding: 4px 0px 0px 0px; }
+
+.postform, .ncform, .menuform {
+  background:#555555;
+}
+.white{
+  color:#ffffff;
+}
+
+
 .postface { height: 52px; background: #eeeeee; padding: 4px 0px 0px 0px; }
 .tosaka_margin, .right_margin, .left_margin, .center_margin { background: #555; }
 
-#slot_tosaka > .row { height: 34px; background: #555; }
+
+#slot_tosaka  .span12 { 
+  height: 34px; background: #555; 
+}
 .center { margin-left:auto; margin-right:auto; text-align:center; }
 .debug { background: #aaaaaa; text-align: center; height: 32px; }
 .face-name { font-size: 20px; }
@@ -30,7 +42,7 @@ hr.white2 { margin: 0px; height: 2px; border-bottom: 0px;background: #ffffff; op
   -moz-border-radius: 10px 10px 0 0 ;
   border-radius: 10px 10px 0 0 ;
 }
-.menu-middle{
+.menu-middle > div{
   color: #fff;
   background: #555;
 }

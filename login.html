@@ -10,167 +10,66 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 
+
+<script src="js/bootstrap-twipsy.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-alerts.js"></script>
+<script src="js/bootstrap-modal.js"></script>
 </head>
 <body style="margin: 0 auto;" >
 
 <script>
-//-----------------------------------
-//COMMENT BUTTON NAVIGATION
 $(document).ready(function(){
   $(".commentbutton").click(function(){
     alert("test")
     $(".commentform").toggle();
     $(".commentbutton").toggle();
   });
-});
-
-//-----------------------------------
-//TOSAKA BUTTON NAVIGATION
-$(document).ready(function(){
   $(".postbutton").click(function(){
-    $(".toggle1:not(.postform)").hide();
     $(".postform").toggle();
-    if($(".postform").is(":visible")){
-      $(".posttextarea").focus();
-    }
   });
 
-  $(".ncbutton").click(function(){
-    $(".toggle1:not(.ncform)").hide();
-    $(".ncform").toggle();
-  });
-
-  $(".menubutton").click(function(){
-    $(".toggle1:not(.menuform)").hide();
-    $(".menuform").toggle();
-  });
-
-  $(".toggle1_close").click(function(){
-    $(".toggle1").hide();
-  });
 });
+
 </script>
 
-
-<!-- NCFORM TMPL -->
-<div class="ncform hide toggle1">
-  <hr class="toumei">
-  <div class="row">
-    <div class="span10 offset1 center white font14 toggle1_close">
-      通知センター
-      <hr class="toumei">
-    </div>
-    <div class="span1">
-      <img class="toggle1_close" src="./UPARROW.png">
-    </div>
-  </div>
-  <div class="row">
-  <hr class="toumei">
-  <hr class="toumei">
-    <div class="span12 center">
-      <img src="http://p.pne.jp/d/201201162250.png" alt="" />
-    </div>
-  </div>
-  <hr class="toumei">
-  <hr class="toumei">
-  <img src="./SEPALATOR.png">
+<div id="tosaka" class="row">
+  <div class="span4"> <img src="./LOGO.png" alt="" /> </div>
+  <div class="span4 center"> <img src="./NOTIFY_CENTER.png" alt="" /> </div>
+  <div class="span3 offset1 center"> <img class="postbutton" src="./POST.png" alt="" /> </div>
 </div>
-<!-- NCFORM TMPL -->
 
-
-<!-- MENUFORM TMPL -->
-<div class="menuform hide toggle1">
-  <hr class="toumei">
-  <div class="row">
-    <div class="span10 offset1 center white font14 toggle1_close">
-      MENU
-      <hr class="toumei">
-    </div>
-    <div class="span1">
-      <img class="toggle1_close" src="./UPARROW.png">
-    </div>
-  </div>
-
-
-  <hr class="toumei">
-
-  <div class="menu-middle row">
-    <div class="span11 offset1">
-      <a class="btn">Home</a>
-      <a class="btn">Diary</a>
-      <a class="btn">Community</a>
-      <a class="btn">Community</a>
-      <a class="btn">Logout</a>
-      <a class="btn">Home</a>
-      <a class="btn">Diary</a>
-      <a class="btn">Logout</a>
-      <a class="btn">Home</a>
-      <a class="btn">Diary</a>
-      <a class="btn">Community</a>
-      <a class="btn">Logout</a>
-    </div>
-  </div>
-  <hr class="toumei">
-  <hr class="toumei">
-  <img src="./SEPALATOR.png">
-</div>
-<!-- MENUFORM TMPL -->
-
-
-<!-- POSTFORM TMPL -->
-<div class="postform hide toggle1">
-  <hr class="toumei">
-  <div class="row">
-    <div class="span10 offset1 center white font14 toggle1_close">
-      投稿フォーム
-      <hr class="toumei">
-    </div>
-    <div class="span1">
-      <img class="toggle1_close" src="./UPARROW.png">
-    </div>
-  </div>
-  <div class="row">
-    <textarea class="posttextarea span12" rows="4" ></textarea>
-  </div>
-  <hr class="toumei">
-  <div class="row">
-    <button class="span10 offset1 btn small primary" >POST</button>
-  </div>
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <hr class="toumei">
-  <img src="./SEPALATOR.png">
-</div>
-<!-- POSTFORM TMPL -->
-
-
-<!-- TOSAKA TMPL -->
-<div id="slot_tosaka">
-  <div class="row">
+<div class="postform hide">
+  <div class="post_margin row" style="height: 12px;">
     <div class="span12">
-      <div class="row">
-        <div class="span4"> <img class="menubutton" src="./LOGO.png" alt="" /> </div>
-        <div class="span4 center"> <img class="ncbutton" src="./NOTIFY_CENTER.png" alt="" /> </div>
-        <div class="span3 offset1 center"> <img class="postbutton" src="./POST.png" alt="" /> </div>
-      </div>
+      <img src="./POST_MARGIN.png" width="320" alt="" />
     </div>
   </div>
+  <div id="face" class="row">
+    <div class="span2"><img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+    <div class="span3">
+      <img src="./post_icon.png" alt="" />
+    </div>
+    <div class="span5">
+      <div class="row"><span class="face-name">フットサル</span></div>
+      <hr class="toumei">
+      <div class="row"><a href="#">@TeamSagantosu</a></div>
+    </div>
+    <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+  </div>
+  <hr class="toumei">
+  <div class="row">
+    <textarea class="span12" rows="3" >?</textarea>
+  </div>
+  <div class="row">
+    <button class="span12 btn small primary" >POST</button>
+  </div>
+<hr class="toumei100">
+<hr class="toumei100">
+<hr class="toumei100">
+<hr class="toumei100">
 </div>
-<!-- TOSAKA TMPL -->
 
-
-
-<!-- FACE TMPL -->
 <div id="face" class="row">
   <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
   <div class="span8">
@@ -182,7 +81,43 @@ $(document).ready(function(){
   <div class="span2 center"> <img src="./HomeIcon.png" height="48"> </div>
 </div>
 <hr class="toumei">
-<!-- FACE TMPL -->
+<div id="face" class="row">
+  <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+  <div class="span8">
+    <hr class="toumei">
+    <div class="row"><span class="face-name">野田 江川富士一二三四</span></div>
+    <hr class="toumei">
+    <div class="row"><a href="#">@MoeNishinosono</a></div>
+  </div>
+  <div class="span2 center"> <img src="./FRIEND.png" height="48"> </div>
+</div>
+<hr class="toumei">
+<div id="face" class="row">
+  <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+  <div class="span8">
+    <hr class="toumei">
+    <div class="row"><span class="face-name">フットサル</span></div>
+    <hr class="toumei">
+    <div class="row"><a href="#">@TeamSagantosu</a></div>
+  </div>
+  <div class="span2 center"> <img src="./COMMUNITY.png" height="48"> </div>
+</div>
+
+<hr class="toumei">
+<div id="face" class="row">
+  <div class="span2"><img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+  <div class="span3">
+    <img src="./post_icon.png" alt="" />
+  </div>
+  <div class="span5">
+    <div class="row"><span class="face-name">フットサル</span></div>
+    <hr class="toumei">
+    <div class="row"><a href="#">@TeamSagantosu</a></div>
+  </div>
+  <div class="span2"> <img src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"> </div>
+</div>
+<hr class="toumei">
+
 
 <div class="row">
   <div class="gadget_header span12"> M e m b e r I m a g e </div>
@@ -195,9 +130,6 @@ $(document).ready(function(){
 </div>
 </div>
 
-
-
-<!-- TIMELINE TMPL -->
 <div class="row">
   <div class="gadget_header span12">Timeline (ハンバーガーレイアウト)</div>
 </div>
@@ -228,8 +160,6 @@ $(document).ready(function(){
 <div class="row">
   <button class="commentbutton btn span10 offset2 small" style="height: 20px; padding: 2px;">コメントする</button>
 </div>
-<!-- TIMELINE TMPL -->
-
 
 
 <div class="row">
@@ -260,9 +190,6 @@ $(document).ready(function(){
     まるまるもりもり
     まるまるもりもり </div>
 </div>
-
-<!-- BEGIN TIMELINE GADGET -->
-
 <div class="row">
   <div class="gadget_header span12"> F r i e n d  L i s t</div>
 </div>
@@ -288,8 +215,6 @@ $.get(
   });
 </script>
 
-<!-- END TIMELINE GADGET -->
-
 <div class="row">
   <div class="gadget_header span12">JavaScript Test </div>
 </div>
@@ -303,6 +228,27 @@ $.get(
 });
 </script>
 
+<button class="b">button</button>
+<div class="alert-message success fade in" data-alert="alert">
+  <a class="close" href="#">&times;</a>
+  <p> You successfully <a href="#">read this</a> alert message.</p>
+</div>
+<div class="alert-message error fade in" data-alert="alert">
+  <a class="close" href="#">&times;</a>
+  <p> You successfully <a href="#">read this</a> alert message.</p>
+</div>
+
+<div id="cqcall" class="alert-message warning fade in" data-alert="alert" >
+  <a class="close" href="#">&times;</a>
+  <p>You’re not looking too good.</p>
+</div>
+<div class="alert-message block-message error fade in" data-alert="alert" >
+  <a class="close" href="#">&times;</a>
+  <p><strong>Oh snap! You got an error!</strong> Chant amet fermentum.</p>
+  <div class="alert-actions">
+    <a class="btn small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+  </div>
+</div>
 
 <div id="modal-from-dom" class="modal hide fade" style="width: 320px;">
   <div class="modal-header"> <a href="#" class="close">&times;</a>
