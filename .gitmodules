@@ -1,0 +1,3 @@
+[submodule "opSMTAPIPlugin"]
+	path = opSMTAPIPlugin
+	url = git://github.com/houou/opSMTAPIPlugin.git
