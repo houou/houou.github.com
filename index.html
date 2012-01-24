@@ -64,19 +64,56 @@ $(document).ready(function(){
       <img class="toggle1_close" src="./UPARROW.png">
     </div>
   </div>
-  <div class="row">
-  <hr class="toumei">
-  <hr class="toumei">
-    <div class="span12 center">
-      <img src="http://p.pne.jp/d/201201162250.png" alt="" />
-    </div>
+  <div id="push_list">
+    <div id="push"></div>
   </div>
-  <hr class="toumei">
-  <hr class="toumei">
-  <img src="./SEPALATOR.png">
 </div>
 <!-- NCFORM TMPL -->
 
+
+<script id="push_template" type="text/x-jquery-tmpl">
+    <div class="row push">
+      <hr class="toumei">
+      <div class="span3" >
+        <img style="margin-left: 5px;" src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48">
+      </div>
+      <div class="span9" style="margin-left: -13px;">
+      {{if category=="friend"}}
+        <div class="row">
+         リンク申請：手嶋　守 承諾しますか？
+        </div>
+        <div class="row">
+            <button class="span2 btn primary" >YES</button>
+            <button class="span2 btn">NO</button>
+        </div>
+      {{/if}}
+      {{if category=="message"}}
+        <div class="link_message">
+        名前、プロフィール写真、性別、ネットワーク、ユーザーID、友達リストなど、すべてのユーザーに公開してい
+        </div>
+      {{/if}}
+      {{if category=="other"}}
+        <div class="link_other">
+        名前、プロフィール写真、性別、ネットワーク、ユーザーID、友達リストなど、すべてのユーザーに公開してい
+        </div>
+      {{/if}}
+      </div>
+    </div>
+    <hr class="gray">
+</script>
+<script>
+var push_list = [
+  { Name: "The Red Violin", Director: "François Girard", category: "friend" },
+  { Name: "Eyes Wide Shut", Director: "Stanley Kubrick" , category: "message" },
+  { Name: "The Inheritance", Director: "Mauro Bolognini" , category: "other" },
+  { Name: "The Red Violin", Director: "François Girard", category: "friend" },
+  { Name: "Eyes Wide Shut", Director: "Stanley Kubrick" , category: "message" },
+  { Name: "The Inheritance", Director: "Mauro Bolognini" , category: "other" },
+];
+
+  $("#push_template").tmpl(push_list).appendTo("#push");  
+
+</script>
 
 <!-- MENUFORM TMPL -->
 <div class="menuform hide toggle1">
@@ -90,7 +127,6 @@ $(document).ready(function(){
       <img class="toggle1_close" src="./UPARROW.png">
     </div>
   </div>
-
 
   <hr class="toumei">
 

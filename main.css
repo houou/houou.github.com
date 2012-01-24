@@ -8,6 +8,12 @@
 .white{
   color:#ffffff;
 }
+#push_list{
+  background: #ddd;
+}
+.push button{
+  height: 23px;
+}
 
 #notification_center{
   position: relative;
@@ -46,6 +52,8 @@
 .gadget_header { height: 20px; background: #333333; color: #ffffff; text-align: center; }
 body { width: 320px; }
 div#slot_tosaka div { height: 100%; }
+
+hr.gray { margin: 0px; height: 0px; border-color: #999;}
 
 hr.toumei { margin: 0px; height: 4px; border-color : transparent; }
 hr.toumei2 { margin: 0px; height: 2px; border-color : transparent; }
