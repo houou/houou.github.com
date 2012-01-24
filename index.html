@@ -75,16 +75,16 @@ $(document).ready(function(){
     <div class="row push">
       <hr class="toumei">
       <div class="span3" >
-        <img style="margin-left: 5px;" src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48">
+        <img style="margin-left: 5px;" src="https://twimg0-a.akamaihd.net/profile_images/1208235715/201101061905_reasonably_small.png" class="rad4" width="48" height="48"><!-- FIXME -->
       </div>
-      <div class="span9" style="margin-left: -13px;">
+      <div class="span9" style="margin-left: -13px;"><!-- FIXME -->
       {{if category=="friend"}}
         <div class="row">
          リンク申請：手嶋　守 承諾しますか？
         </div>
         <div class="row">
-            <button class="span2 btn primary" >YES</button>
-            <button class="span2 btn">NO</button>
+            <button class="span2 btn primary small">YES</button>
+            <button class="span2 btn small">NO</button>
         </div>
       {{/if}}
       {{if category=="message"}}
@@ -264,10 +264,11 @@ var push_list = [
 
 <div class="commentform row hide">
   <textarea class="commentarea span10 offset2" rows="3"></textarea>
-  <button class="commentsubmit btn span10 offset2 small" style="height: 20px; padding: 2px;">投稿</button>
+  <button class="commentsubmit btn span10 offset2 small" style="height: 20px; padding: 2px;">投稿</button> <!--FIXME-->
 </div>
 <div class="row">
-  <button class="commentbutton btn span10 offset2 small" style="height: 20px; padding: 2px;">コメントする</button>
+  <button class="commentbutton btn span10 offset2 small" style="height: 20px; padding: 2px;">コメントする</button> <!--FIXME-->
+
 </div>
 <!-- TIMELINE TMPL -->
 
