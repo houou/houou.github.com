@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title></title>
 <meta name="viewport" content="width=320px,user-scalable=no">
-<link rel="stylesheet" href="bootstrap.css" media="all" />
-<link rel="stylesheet" href="main.css" media="all" />
+<link rel="stylesheet" href="css/bootstrap.css" media="all" />
+<link rel="stylesheet" href="css/main.css" media="all" />
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
@@ -84,7 +84,7 @@ $(document).ready(function(){
          リンク申請：手嶋　守 承諾しますか？
         </div>
         <div class="row">
-            <button class="span2 btn btn-primary small">YES</button>
+            <button class="span2 btn-primary small">YES</button>
             <button class="span2 btn small">NO</button>
         </div>
       {{/if}}
@@ -120,7 +120,7 @@ var push_list = [
 <div class="menuform hide toggle1">
   <hr class="toumei">
   <div class="row">
-    <div class="span10 offset1 center white font14 toggle1_close">
+    <div class="span10 offset1 white font14 toggle1_close">
       MENU
       <hr class="toumei">
     </div>
@@ -133,11 +133,10 @@ var push_list = [
 
   <div class="menu-middle row">
     <div class="span11 offset1">
-      <a class="btn">Home</a>
-      <a class="btn">Diary</a>
-      <a class="btn">Community</a>
-      <a class="btn">Community</a>
-      <a class="btn">Logout</a>
+      <a class="btn"><i class="icon-home"></i> Home</a>
+      <a class="btn"><i class="icon-book"></i> Diary</a>
+      <a class="btn"><i class="icon-heart"></i> Community</a>
+      <a class="btn"><i class="icon-eject"></i> Logout</a>
       <a class="btn">Home</a>
       <a class="btn">Diary</a>
       <a class="btn">Logout</a>
@@ -158,20 +157,21 @@ var push_list = [
 <div class="postform hide toggle1">
   <hr class="toumei">
   <div class="row">
-    <div class="span10 offset1 center white font14 toggle1_close">
-      投稿フォーム
-      <hr class="toumei">
+    <div class="span10 offset1 white font14 toggle1_close">
+      <div class="center">投稿フォーム</div>
     </div>
     <div class="span1">
       <img class="toggle1_close" src="./UPARROW.png">
     </div>
   </div>
   <div class="row">
+    <div class="span12"> 
     <textarea class="posttextarea span12" rows="4" ></textarea>
+    </div>
   </div>
   <hr class="toumei">
   <div class="row">
-    <button class="span10 offset1 btn small primary" >POST</button>
+    <button class="span10 offset1 btn-primary small" >POST</button>
   </div>
   <hr class="toumei">
   <hr class="toumei">
@@ -357,7 +357,7 @@ $.get(
       <br>
       body</p>
   </div>
-  <div class="modal-footer"> <a href="#" class="btn primary">Primary</a> <a href="#" class="btn secondary">Secondary</a> </div>
+  <div class="modal-footer"> <a href="#" class="btn-primary">Primary</a> <a href="#" class="btn secondary">Secondary</a> </div>
 </div>
 <a class="btn" data-controls-modal="modal-from-dom" data-backdrop="static" >Launch Modal</a>
 
@@ -387,7 +387,7 @@ $.get(
 </div>
 
 <div class="row">
-  <button class="span12 btn small primary" >POST</button>
+  <button class="span12 btn-primary small" >POST</button>
 </div>
 
 
