@@ -10,6 +10,12 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 
+<!-- FOR TESTING -->
+<link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" media="screen" />
+<script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+<script type="text/javascript" src="test/index.js"></script>
+<!-- FOR TESTING -->
+
 </head>
 <body style="margin: 0 auto;" >
 
@@ -324,11 +330,13 @@ var push_list = [
 </script>
 
 <script>
+/*
 $.get(
   "opSMTAPIPlugin/web/test/friend/list.json",
   function(res){
     $( "#TMPLfriendList" ).tmpl( res.data ).appendTo( "#TMPLfriendListPH" );
   });
+*/
 </script>
 
 <!-- END TIMELINE GADGET -->
@@ -411,6 +419,16 @@ $.get(
   <div class="span2">PM</div>
   <div class="span2">@@@</div>
   <div class="span2">LINK</div>
+</div>
+
+
+<div id="test" style="display: none;">
+  <h1 id="qunit-header">QUnit example</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">test markup, will be hidden</div>
 </div>
 
 </body>
